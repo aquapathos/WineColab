@@ -1,6 +1,6 @@
 apt-get update && apt install -y --no-install-recommends libgtkglext1 libpango1.0-0 libpangox-1.0-0
 
-# VIRTUALGL_VERSION=2.6.1
+VIRTUALGL_VERSION=2.6.1
 TURBOVNC_VERSION=2.2.1
 LIBJPEG_VERSION=2.0.0
 NOVNC_VERSION=1.0.0
@@ -15,7 +15,7 @@ mkdir -p /opt
 cd /tmp
 curl -fsSL -O https://sourceforge.net/projects/turbovnc/files/${TURBOVNC_VERSION}/turbovnc_${TURBOVNC_VERSION}_amd64.deb
 curl -fsSL -O https://sourceforge.net/projects/libjpeg-turbo/files/${LIBJPEG_VERSION}/libjpeg-turbo-official_${LIBJPEG_VERSION}_amd64.deb
-# curl -fsSL -O https://sourceforge.net/projects/virtualgl/files/${VIRTUALGL_VERSION}/virtualgl_${VIRTUALGL_VERSION}_amd64.deb
+curl -fsSL -O https://sourceforge.net/projects/virtualgl/files/${VIRTUALGL_VERSION}/virtualgl_${VIRTUALGL_VERSION}_amd64.deb
 curl -fsSL -O https://download.anydesk.com/linux/anydesk_${ANYDESK_VERSION}_amd64.deb
 dpkg -i *.deb
 sed -i 's/$host:/unix:/g' /opt/TurboVNC/bin/vncserver
