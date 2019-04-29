@@ -42,8 +42,11 @@ apt install -y --no-install-recommends \
         libsm6 \
         libxv1 \
         x11-xkb-utils \
+        x11-xserver-utils \
+        x11-utils \
         xauth \
         xfonts-base \
+        x11-
         xkb-data \
         openbox \
         scrot \
