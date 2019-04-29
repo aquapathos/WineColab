@@ -46,7 +46,6 @@ apt install -y --no-install-recommends \
         x11-utils \
         xauth \
         xfonts-base \
-        x11-
         xkb-data \
         openbox \
         scrot \
@@ -94,4 +93,4 @@ dpkg --add-architecture i386
 wget -nc https://dl.winehq.org/wine-builds/winehq.key
 apt-key add winehq.key
 apt-add-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ bionic main'
-apt install --install-recommends winehq-stable
+apt install --install-recommends winehq-stable winetricks
