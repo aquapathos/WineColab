@@ -96,4 +96,4 @@ wget -nc https://dl.winehq.org/wine-builds/winehq.key
 apt-key add winehq.key
 apt-add-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ bionic main'
 apt install --install-recommends winehq-stable winetricks zenity
-winetricks vcrun2015
+
