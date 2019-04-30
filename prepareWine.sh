@@ -54,8 +54,6 @@ apt install -y --no-install-recommends \
         xtightvncviewer \
         mesa-utils \
         python-opengl \
-        xfce4 \
-        xfce4-goodies \
     > /dev/null
     
 cd ${CWD}
@@ -64,6 +62,8 @@ cd ${CWD}
 #         curl \
 #         openbox \
 #         xfce4-terminal \
+#        xfce4 \
+#        xfce4-goodies \
 
 # Xvfb (仮想ディスプレイ)
 # apt-get -q -y install xvfb > /dev/null
@@ -81,6 +81,13 @@ unzip -d /opt ngrok-stable-linux-amd64.zip
 rm ngrok-stable-linux-amd64.zip 
 echo "web_addr: 4045" > /content/config.yml
 
+# WineHQ
+dpkg --add-architecture i386
+wget -nc https://dl.winehq.org/wine-builds/winehq.key
+apt-key add winehq.key
+apt-add-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ bionic main'
+apt install --install-recommends winehq-stable winetricks zenity
+
 # Xmodmap
 cat << EOS > ~/.Xmodmap
 keycode 111 = Up
@@ -90,11 +97,3 @@ keycode 114 = Right
 EOS
 python /opt/websockify/run 5901 --web=/opt/noVNC --wrap-mode=ignore -- /opt/TurboVNC/bin/vncserver :1 -depth 24 -geometry 1600x900 -securitytypes otp -otp -noxstartup > /content/.vnc/stdout 2>&1 &
 xmodmap ~/.Xmodmap
-
-# WineHQ
-dpkg --add-architecture i386
-wget -nc https://dl.winehq.org/wine-builds/winehq.key
-apt-key add winehq.key
-apt-add-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ bionic main'
-apt install --install-recommends winehq-stable winetricks zenity
-
