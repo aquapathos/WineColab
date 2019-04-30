@@ -54,8 +54,8 @@ apt install -y --no-install-recommends \
         xtightvncviewer \
         mesa-utils \
         python-opengl \
-        xfce \
-        xfce-goodies \
+        xfce4 \
+        xfce4-goodies \
     > /dev/null
     
 cd ${CWD}
