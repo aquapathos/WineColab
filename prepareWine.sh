@@ -47,7 +47,6 @@ apt install -y --no-install-recommends \
         xauth \
         xfonts-base \
         xkb-data \
-        openbox \
         scrot \
         xterm \
         xvfb \
@@ -55,13 +54,16 @@ apt install -y --no-install-recommends \
         xtightvncviewer \
         mesa-utils \
         python-opengl \
-        xfce4-terminal \
+        xfce \
+        xfce-goodies \
     > /dev/null
     
 cd ${CWD}
 
 
 #         curl \
+#         openbox \
+#         xfce4-terminal \
 
 # Xvfb (仮想ディスプレイ)
 # apt-get -q -y install xvfb > /dev/null
