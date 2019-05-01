@@ -54,6 +54,10 @@ apt install -y --no-install-recommends \
         xtightvncviewer \
         mesa-utils \
         python-opengl \
+        openbox \
+        xfce4 \
+        xfce4-goodies \
+        gvfs libgail-common libgtk2.0-bin \
     > /dev/null
     
 cd ${CWD}
