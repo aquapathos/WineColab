@@ -56,8 +56,7 @@ apt install -y  -qq  --no-install-recommends \
         python-opengl \
         openbox \
         gvfs libgail-common libgtk2.0-bin \
-    > /dev/null
-    
+
 cd ${CWD}
 
 # Web ブラウザ（Epiphany）
