@@ -1,3 +1,5 @@
+apt update && apt upgrade && apt install -y --no-install-recommends libgtkglext1 libpango1.0-0 libpangox-1.0-0 libgtk2.0-0 
+
 VIRTUALGL_VERSION=2.6.1
 TURBOVNC_VERSION=2.2.1
 LIBJPEG_VERSION=2.0.2
@@ -30,7 +32,6 @@ cd /opt/websockify
 make  > /dev/null
 
 # X11 
-apt update && apt upgrade && apt install -y --no-install-recommends libgtkglext1 libpango1.0-0 libpangox-1.0-0
 apt install -y  \
         ca-certificates \
         vim.tiny \
