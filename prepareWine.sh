@@ -64,10 +64,7 @@ cd ${CWD}
 
 
 #         curl \
-#         openbox \
 #         xfce4-terminal \
-#        xfce4 \
-#        xfce4-goodies \
 
 # Xvfb (仮想ディスプレイ)
 # apt-get -q -y install xvfb > /dev/null
