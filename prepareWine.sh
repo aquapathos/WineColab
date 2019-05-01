@@ -1,4 +1,4 @@
-apt update
+apt -q update
 # apt upgrade 
 apt install -y -q --no-install-recommends libgtkglext1 libpango1.0-0 libpangox-1.0-0 libgtk2.0-0 
 # apt install -y libgtkglext1 libpango1.0-0 libpangox-1.0-0 libgtk2.0-0 
