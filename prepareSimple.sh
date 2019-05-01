@@ -1,6 +1,6 @@
 apt update -qq 
 # apt upgrade 
-apt install -y  -qq --no-install-recommends libgtkglext1 libpango1.0-0 libpangox-1.0-0 libgtk2.0-0 
+apt install -y -qq --no-install-recommends libgtkglext1 libpango1.0-0 libpangox-1.0-0 libgtk2.0-0 
 
 TURBOVNC_VERSION=2.2.1
 LIBJPEG_VERSION=2.0.0
@@ -60,9 +60,9 @@ apt install -y  -qq  --no-install-recommends \
 cd ${CWD}
 
 # Web ブラウザ（Epiphany）
-add-apt-repository -r -y -qq ppa:gnome3-team/gnome3
-add-apt-repository -y -qq ppa:gnome3-team/gnome3 
-apt -qq -y install epiphany-browser 
+add-apt-repository -r -y ppa:gnome3-team/gnome3
+add-apt-repository -y ppa:gnome3-team/gnome3 
+apt install -qq -y epiphany-browser 
 
 # Ngrok
 mkdir -p /content/.vnc
