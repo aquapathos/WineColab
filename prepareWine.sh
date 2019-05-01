@@ -1,12 +1,9 @@
-apt-get update && apt install -y --no-install-recommends libgtkglext1 libpango1.0-0 libpangox-1.0-0
-
 VIRTUALGL_VERSION=2.6.1
 TURBOVNC_VERSION=2.2.1
 LIBJPEG_VERSION=2.0.0
 NOVNC_VERSION=1.0.0
 WEBSOCKIFY_VERSION=0.8.0
 ANYDESK_VERSION=4.0.1-1
-
 
 CWD=$(pwd)
 mkdir -p /opt
@@ -33,8 +30,8 @@ cd /opt/websockify
 make  > /dev/null
 
 # X11 
-apt update && apt upgrade
-apt install -y --no-install-recommends \
+apt update && apt upgrade && apt install -y --no-install-recommends libgtkglext1 libpango1.0-0 libpangox-1.0-0
+apt install -y  \
         ca-certificates \
         vim.tiny \
         nano \
