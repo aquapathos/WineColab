@@ -1,6 +1,6 @@
 apt update
 # apt upgrade 
-apt install -y --no-install-recommends libgtkglext1 libpango1.0-0 libpangox-1.0-0 libgtk2.0-0 
+apt install -y -q --no-install-recommends libgtkglext1 libpango1.0-0 libpangox-1.0-0 libgtk2.0-0 
 # apt install -y libgtkglext1 libpango1.0-0 libpangox-1.0-0 libgtk2.0-0 
 
 VIRTUALGL_VERSION=2.6.1
@@ -35,7 +35,7 @@ cd /opt/websockify
 make  > /dev/null
 
 # X11 
-apt install -y  \
+apt install -y -q  \
         ca-certificates \
         vim.tiny \
         nano \
@@ -89,7 +89,7 @@ dpkg --add-architecture i386
 wget -nc https://dl.winehq.org/wine-builds/winehq.key
 apt-key add winehq.key
 apt-add-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ bionic main'
-apt install --install-recommends winehq-stable winetricks zenity
+apt install -q --no--install-recommends winehq-stable winetricks zenity
 
 # Xmodmap
 cat << EOS > ~/.Xmodmap
