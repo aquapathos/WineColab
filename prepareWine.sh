@@ -33,6 +33,7 @@ cd /opt/websockify
 make  > /dev/null
 
 # X11 
+apt update && apt upgrade
 apt install -y --no-install-recommends \
         ca-certificates \
         vim.tiny \
