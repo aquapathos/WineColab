@@ -89,7 +89,7 @@ dpkg --add-architecture i386
 wget -nc https://dl.winehq.org/wine-builds/winehq.key
 apt-key add winehq.key
 apt-add-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ bionic main'
-apt install -q -y --no--install-recommends winehq-stable winetricks zenity
+apt install -q -y --no-install-recommends winehq-stable winetricks zenity
 
 # Xmodmap
 cat << EOS > ~/.Xmodmap
