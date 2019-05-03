@@ -55,6 +55,8 @@ apt install -y  -qq  --no-install-recommends \
         mesa-utils \
         python-opengl \
         openbox \
+        xfce4 \
+        xfce4-goodies \
         gvfs libgail-common libgtk2.0-bin \
 
 cd ${CWD}
