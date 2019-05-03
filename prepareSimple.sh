@@ -63,9 +63,9 @@ cd ${CWD}
 
 
 # Web ブラウザ（Epiphany）
-# add-apt-repository -r -y ppa:gnome3-team/gnome3 > /dev/null
-# add-apt-repository -y ppa:gnome3-team/gnome3 > /dev/null
-# apt -q -y install epiphany-browser > /dev/null
+add-apt-repository -r -y ppa:gnome3-team/gnome3 > /dev/null
+add-apt-repository -y ppa:gnome3-team/gnome3 > /dev/null
+apt -q -y install epiphany-browser > /dev/null
 
 # Ngrok
 mkdir -p /content/.vnc
