@@ -60,9 +60,9 @@ apt install -y  -qq  --no-install-recommends \
 cd ${CWD}
 
 # Web ブラウザ（Epiphany）
-add-apt-repository -r -y ppa:gnome3-team/gnome3
-add-apt-repository -y ppa:gnome3-team/gnome3 
-apt install -qq -y epiphany-browser 
+add-apt-repository -r -y ppa:gnome3-team/gnome3 > /dev/null
+add-apt-repository -y ppa:gnome3-team/gnome3 > /dev/null
+apt -q -y install epiphany-browser > /dev/null
 
 # Ngrok
 mkdir -p /content/.vnc
@@ -81,3 +81,5 @@ keycode 114 = Right
 EOS
 
 # You should do 'xmodmap ~/.Xmodmap' after starting X
+/opt/websockify/run 5901 --web=/opt/noVNC --wrap-mode=ignore -- /opt/TurboVNC/bin/vncserver :1 -depth 24 -geometry 1600x900 -securitytypes otp -otp -noxstartup > /content/.vnc/stdout 2>&1 &
+DISPLAY=:1 xmodmap ~/.Xmodmap
