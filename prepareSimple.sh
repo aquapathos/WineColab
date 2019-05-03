@@ -1,6 +1,7 @@
-apt update -qq 
+apt update
 # apt upgrade 
-apt install -y -qq --no-install-recommends libgtkglext1 libpango1.0-0 libpangox-1.0-0 libgtk2.0-0 
+apt install -y -q --no-install-recommends libgtkglext1 libpango1.0-0 libpangox-1.0-0 libgtk2.0-0 
+# apt install -y libgtkglext1 libpango1.0-0 libpangox-1.0-0 libgtk2.0-0 
 
 TURBOVNC_VERSION=2.2.1
 LIBJPEG_VERSION=2.0.0
@@ -58,7 +59,7 @@ apt install -y  -qq  --no-install-recommends \
         xfce4 \
         xfce4-goodies \
         gvfs libgail-common libgtk2.0-bin \
-
+    > /dev/null
 cd ${CWD}
 
 # Web ブラウザ（Epiphany）
