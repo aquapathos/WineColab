@@ -1,10 +1,9 @@
 apt update
 # apt upgrade 
 apt install -y -q --no-install-recommends libgtkglext1 libpango1.0-0 libpangox-1.0-0 libgtk2.0-0 
-# apt install -y libgtkglext1 libpango1.0-0 libpangox-1.0-0 libgtk2.0-0 
 
 TURBOVNC_VERSION=2.2.1
-LIBJPEG_VERSION=2.0.0
+LIBJPEG_VERSION=2.0.2
 NOVNC_VERSION=1.0.0
 WEBSOCKIFY_VERSION=0.8.0
 ANYDESK_VERSION=4.0.1-1
@@ -33,8 +32,7 @@ cd /opt/websockify
 make  > /dev/null
 
 # X11 
-# apt update && apt upgrade
-apt install -y  -qq  --no-install-recommends \
+apt install -y -q  \
         ca-certificates \
         vim.tiny \
         nano \
@@ -60,12 +58,14 @@ apt install -y  -qq  --no-install-recommends \
         xfce4-goodies \
         gvfs libgail-common libgtk2.0-bin \
     > /dev/null
+    
 cd ${CWD}
 
+
 # Web ブラウザ（Epiphany）
-add-apt-repository -r -y ppa:gnome3-team/gnome3 > /dev/null
-add-apt-repository -y ppa:gnome3-team/gnome3 > /dev/null
-apt -q -y install epiphany-browser > /dev/null
+# add-apt-repository -r -y ppa:gnome3-team/gnome3 > /dev/null
+# add-apt-repository -y ppa:gnome3-team/gnome3 > /dev/null
+# apt -q -y install epiphany-browser > /dev/null
 
 # Ngrok
 mkdir -p /content/.vnc
@@ -82,7 +82,5 @@ keycode 116 = Down
 keycode 113 = Left
 keycode 114 = Right
 EOS
-
-# You should do 'xmodmap ~/.Xmodmap' after starting X
 /opt/websockify/run 5901 --web=/opt/noVNC --wrap-mode=ignore -- /opt/TurboVNC/bin/vncserver :1 -depth 24 -geometry 1600x900 -securitytypes otp -otp -noxstartup > /content/.vnc/stdout 2>&1 &
 DISPLAY=:1 xmodmap ~/.Xmodmap
