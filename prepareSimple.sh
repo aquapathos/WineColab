@@ -82,6 +82,6 @@ keycode 113 = Left
 keycode 114 = Right
 EOS
 
-export DISPLAY=:1 
-/opt/websockify/run 5901 --web=/opt/noVNC --wrap-mode=ignore -- /opt/TurboVNC/bin/vncserver :1 -depth 24 -geometry 1600x900 -securitytypes otp -otp -noxstartup > /content/.vnc/stdout 2>&1 &
-xmodmap ~/.Xmodmap
+#export DISPLAY=:1 
+#/opt/websockify/run 5901 --web=/opt/noVNC --wrap-mode=ignore -- /opt/TurboVNC/bin/vncserver :1 -depth 24 -geometry 1600x900 -securitytypes otp -otp -noxstartup > /content/.vnc/stdout 2>&1 &
+#xmodmap ~/.Xmodmap
