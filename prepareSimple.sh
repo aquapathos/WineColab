@@ -11,7 +11,7 @@ ANYDESK_VERSION=4.0.1-1
 CWD=$(pwd)
 mkdir -p /opt
 
-# TurboVNC + VirtualGL
+# TurboVNCanydesk
 cd /tmp
 curl -fsSL -O https://sourceforge.net/projects/turbovnc/files/${TURBOVNC_VERSION}/turbovnc_${TURBOVNC_VERSION}_amd64.deb
 curl -fsSL -O https://sourceforge.net/projects/libjpeg-turbo/files/${LIBJPEG_VERSION}/libjpeg-turbo-official_${LIBJPEG_VERSION}_amd64.deb
@@ -60,7 +60,6 @@ apt install -y -q  \
     > /dev/null
     
 cd ${CWD}
-
 
 # Web ブラウザ（Epiphany）
 add-apt-repository -r -y ppa:gnome3-team/gnome3 > /dev/null
