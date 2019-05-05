@@ -1,6 +1,6 @@
 apt update
 # apt upgrade 
-apt install -y -q --no-install-recommends libgtkglext1 libpango1.0-0 libpangox-1.0-0 libgtk2.0-0 
+apt-get install -y -q --no-install-recommends libgtkglext1 libpango1.0-0 libpangox-1.0-0 libgtk2.0-0 
 # apt install -y libgtkglext1 libpango1.0-0 libpangox-1.0-0 libgtk2.0-0 
 
 VIRTUALGL_VERSION=2.6.1
@@ -35,7 +35,7 @@ cd /opt/websockify
 make  > /dev/null
 
 # X11 
-apt install -y -q  \
+apt-get install -y -q  \
         ca-certificates \
         vim.tiny \
         nano \
@@ -74,7 +74,7 @@ cd ${CWD}
 # Web ブラウザ（Epiphany）
 add-apt-repository -r -y ppa:gnome3-team/gnome3 > /dev/null
 add-apt-repository -y ppa:gnome3-team/gnome3 > /dev/null
-apt -q -y install epiphany-browser > /dev/null
+apt-get -q -y install epiphany-browser > /dev/null
 
 # Ngrok
 mkdir -p /content/.vnc
@@ -89,7 +89,7 @@ dpkg --add-architecture i386
 wget -nc https://dl.winehq.org/wine-builds/winehq.key
 apt-key add winehq.key
 apt-add-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ bionic main'
-apt install -q -y --no-install-recommends winehq-stable winetricks zenity
+apt-get install -q -y --no-install-recommends winehq-stable winetricks zenity
 
 # Xmodmap
 cat << EOS > ~/.Xmodmap
