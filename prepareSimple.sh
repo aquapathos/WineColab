@@ -57,6 +57,8 @@ apt-get install -y -q  \
         xfce4 \
         xfce4-goodies \
         gvfs libgail-common libgtk2.0-bin \
+        at-spi2-core \
+        florence \
     > /dev/null
     
 cd ${CWD}
