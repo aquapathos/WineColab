@@ -1,6 +1,6 @@
 apt update
 # apt upgrade 
-apt install -y -q --no-install-recommends libgtkglext1 libpango1.0-0 libpangox-1.0-0 libgtk2.0-0 
+apt-get install -y -q --no-install-recommends libgtkglext1 libpango1.0-0 libpangox-1.0-0 libgtk2.0-0 
 
 TURBOVNC_VERSION=2.2.1
 LIBJPEG_VERSION=2.0.2
@@ -32,7 +32,7 @@ cd /opt/websockify
 make  > /dev/null
 
 # X11 
-apt install -y -q  \
+apt-get install -y -q  \
         ca-certificates \
         vim.tiny \
         nano \
@@ -64,7 +64,7 @@ cd ${CWD}
 # Web ブラウザ（Epiphany）
 add-apt-repository -r -y ppa:gnome3-team/gnome3 > /dev/null
 add-apt-repository -y ppa:gnome3-team/gnome3 > /dev/null
-apt -q -y install epiphany-browser > /dev/null
+apt-get -q -y install epiphany-browser > /dev/null
 
 # Ngrok
 mkdir -p /content/.vnc
