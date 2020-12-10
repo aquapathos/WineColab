@@ -3,7 +3,7 @@ apt update
 apt-get install -y -q --no-install-recommends libgtkglext1 libpango1.0-0 libpangox-1.0-0 libgtk2.0-0 
 
 TURBOVNC_VERSION=2.2.5
-LIBJPEG_VERSION=2.0.9
+LIBJPEG_VERSION=2.0.6
 NOVNC_VERSION=1.2.0
 WEBSOCKIFY_VERSION=0.9.0
 ANYDESK_VERSION=6.0.1-1
