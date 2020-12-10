@@ -30,6 +30,7 @@ mv /opt/websockify-${WEBSOCKIFY_VERSION} /opt/websockify
 ln -s /opt/noVNC/vnc_lite.html /opt/noVNC/index.html
 cd /opt/websockify
 make  > /dev/null
+mv rebind.so websockify
 
 # X11 
 apt-get install -y -q  \
