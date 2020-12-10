@@ -2,11 +2,11 @@ apt update
 # apt upgrade 
 apt-get install -y -q --no-install-recommends libgtkglext1 libpango1.0-0 libpangox-1.0-0 libgtk2.0-0 
 
-TURBOVNC_VERSION=2.2.1
-LIBJPEG_VERSION=2.0.2
-NOVNC_VERSION=1.0.0
-WEBSOCKIFY_VERSION=0.8.0
-ANYDESK_VERSION=4.0.1-1
+TURBOVNC_VERSION=2.2.5
+LIBJPEG_VERSION=2.0.9
+NOVNC_VERSION=1.2.0
+WEBSOCKIFY_VERSION=0.9.0
+ANYDESK_VERSION=6.0.1-1
 
 CWD=$(pwd)
 mkdir -p /opt
@@ -70,7 +70,6 @@ apt-get -q -y install epiphany-browser > /dev/null
 # Ngrok
 mkdir -p /content/.vnc
 curl -fsSL -O https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
-rm /opt/ngrok
 unzip -d /opt ngrok-stable-linux-amd64.zip
 rm ngrok-stable-linux-amd64.zip 
 echo "web_addr: 4045" > /content/config.yml
@@ -82,7 +81,3 @@ keycode 116 = Down
 keycode 113 = Left
 keycode 114 = Right
 EOS
-
-#export DISPLAY=:1 
-#/opt/websockify/run 5901 --web=/opt/noVNC --wrap-mode=ignore -- /opt/TurboVNC/bin/vncserver :1 -depth 24 -geometry 1600x900 -securitytypes otp -otp -noxstartup > /content/.vnc/stdout 2>&1 &
-#xmodmap ~/.Xmodmap
